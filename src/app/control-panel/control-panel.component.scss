@@ -16,9 +16,6 @@
     }
 }
 
-.selected-btn {
-    transform: rotateZ(45deg);
-}
 
 .tracer-range {
     width: 100%;
@@ -28,9 +25,17 @@
 .is-insane {
     background-color: crimson;
     color: white;
+    transform: translateY(-2px);
+    &::after {
+        box-shadow: inset -4px -4px darkred;
+    }
     &.selected-btn {
         animation: animation .05s infinite alternate;
     }
+}
+
+.selected-btn {
+    transform: rotateZ(45deg);
 }
 
 @keyframes animation {
