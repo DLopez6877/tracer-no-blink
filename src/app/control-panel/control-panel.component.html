@@ -1,0 +1,36 @@
+<div class="nes-container is-rounded with-title">
+    <p class="title">Difficulty</p>
+    <button [ngClass]="{'selected-btn': difficulty == 800}" class="nes-btn is-success" (click)="setDifficulty('easy')">Easy</button>
+    <button [ngClass]="{'selected-btn': difficulty == 600}" class="nes-btn" (click)="setDifficulty('normal')">Normal</button>
+    <button [ngClass]="{'selected-btn': difficulty == 500}" class="nes-btn is-warning" (click)="setDifficulty('hard')">Hard</button>
+    <button [ngClass]="{'selected-btn': difficulty == 400}" class="nes-btn is-error" (click)="setDifficulty('expert')">Expert</button>
+    <button [ngClass]="{'selected-btn': difficulty === 200}" class="nes-btn is-insane" (click)="setDifficulty('insanity')">Insanity</button>
+</div>
+
+<div class="nes-container is-rounded with-title crosshair-container">
+    <p class="title">Crosshair</p>
+    <label>
+        <input type="radio" [checked]="crosshairType == 'crosshair1.png'" name="crosshair" (input)="setCrosshairType('STANDARD')" />
+        <img src="../../assets/crosshair1.png" alt="plain old crosshair">
+    </label>
+    <label>
+        <input type="radio" [checked]="crosshairType == 'crosshair2.png'" name="crosshair" (input)="setCrosshairType('BOXXY')" />
+        <img src="../../assets/crosshair2.png" alt="square crosshair which seems crappy for precision">
+    </label>
+    <label>
+        <input type="radio" [checked]="crosshairType == 'crosshair3.png'" name="crosshair" (input)="setCrosshairType('LOLLYGAG')" />
+        <img src="../../assets/crosshair3.png" alt="crosshair with way too many dashes everywhere">
+    </label>
+    <label>
+        <input type="radio" [checked]="crosshairType == 'crosshair4.png'" name="crosshair" (input)="setCrosshairType('COLLYWOBBLES')" />
+        <img src="../../assets/crosshair4.png" alt="crosshair with a nipple in the middle">
+    </label>
+</div>
+
+<div class="nes-container is-rounded with-title">
+    <p class="title">Number of Tracers</p>
+    <div class="nes-field is-inline">
+        <input type="range" min="1" max="50" class="tracer-range" [value]="numberOfTracers" (input)="setNumberOfTracers($event.target.value)">
+        {{numberOfTracers}}
+    </div>
+</div>

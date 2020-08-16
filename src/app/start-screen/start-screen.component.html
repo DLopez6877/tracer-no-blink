@@ -1,0 +1,17 @@
+<div *ngIf="!settingUpGame" class="start-screen-component">
+  <h1 class="title">Tracer, No Blink</h1>
+  <div class="characters">
+    <img class="widomwaker" src="assets/widowmaker.png" alt="widowmaker" />
+    <button
+      (click)="startGame()"
+      type="button"
+      class="nes-btn is-primary start-btn"
+    >Start</button>
+    <img class="tracer" src="assets/tracer.png" alt="tracer" />
+  </div>
+  <app-control-panel #controlPanel></app-control-panel>
+</div>
+
+<div *ngIf="settingUpGame" class="progress-container">
+  <progress class="nes-progress" [value]="setupProgress" max="100"></progress>
+</div>

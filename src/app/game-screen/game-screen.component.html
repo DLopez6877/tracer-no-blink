@@ -1,0 +1,11 @@
+<div class="game-screen-component" [ngClass]="crosshairClass">
+    <div [ngClass]="{'hidden': !gameStarted}" >
+        <app-stopwatch #stopwatch></app-stopwatch>
+        <app-tracer *ngFor="let t of tracers" #tracer (onHit)="destroyTracer(tracer)" (onHeadshot)="destroyTracer(tracer)"></app-tracer>
+        <ng-template #hsHost></ng-template>
+    </div>
+    
+    <div *ngIf="!gameStarted" class="countdown-container">
+        <app-countdown (onCountdownComplete)="startGame()"></app-countdown>
+    </div>
+</div>

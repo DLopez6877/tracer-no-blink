@@ -1,0 +1,33 @@
+.game-screen-component {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.countdown-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    display: none;
+    pointer-events: none;
+}
+
+.crosshair1 {
+    cursor: url('/assets/crosshair1.png') 13 13, auto !important;
+}
+.crosshair2 {
+    cursor: url('/assets/crosshair2.png') 13 13, auto !important;
+}
+.crosshair3 {
+    cursor: url('/assets/crosshair3.png') 13 13, auto !important;
+}
+.crosshair4 {
+    cursor: url('/assets/crosshair4.png') 13 13, auto !important;
+}

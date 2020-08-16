@@ -1,0 +1,32 @@
+<div class="finish-screen container">
+    
+    <button type="button" class="nes-btn is-primary play-btn" [routerLink]="'/game-screen'">Play Again</button>
+    <h1>Score</h1>
+    <div class="game-score">{{toHHMMSS(gameScore)}}</div>
+    <h5 class="high-score">High Score: {{toHHMMSS(topScore)}}</h5>
+    <div class="buttons">
+        <button type="button" class="nes-btn is-warning settings-btn" [routerLink]="'/'">Settings</button>
+        <button type="button" class="nes-btn is-error" (click)="clearHistory()">Clear History</button>
+    </div>
+    <div class="nes-table-responsive">
+        <table class="nes-table is-bordered is-centered">
+            <thead>
+            <tr>
+                <th>Score</th>
+                <th>Tracers</th>
+                <th>Difficulty</th>
+                <th>Crosshair</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="game" *ngFor="let game of gameHistory; first as isFirst" [ngClass]="{'last-game': isFirst}">
+                <td>{{toHHMMSS(game.score)}}</td>
+                <td>{{game.numberOfTracers}}</td>
+                <td>{{translateSpeedToDifficulty(game.difficulty)}}</td>
+                <td>{{translateCrosshairTypeValueToKey(game.crosshairType)}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

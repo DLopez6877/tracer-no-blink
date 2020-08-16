@@ -1,0 +1,27 @@
+.tracer-component {
+    --x: 0px;
+    --y: 0px;
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    user-select: none;
+    img {
+        height: 65px;
+    }
+    .head-hitbox {
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
+    .body-hitbox {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 150% 50% 30% 30%;
+        width: 60px;
+        height: 65px;
+    }
+}

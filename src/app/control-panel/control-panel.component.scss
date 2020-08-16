@@ -1,0 +1,57 @@
+.nes-container {
+    margin: 30px auto;
+    .title {
+        position: absolute;
+        top: 8px;
+    }
+    &.crosshair-container {
+        display: flex;
+        justify-content: space-between;
+        img {
+            margin-left: 5px;
+        }
+    }
+    button {
+        transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+
+.selected-btn {
+    transform: rotateZ(45deg);
+}
+
+.tracer-range {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.is-insane {
+    background-color: crimson;
+    color: white;
+    &.selected-btn {
+        animation: animation .05s infinite alternate;
+    }
+}
+
+@keyframes animation {
+    0% {
+        color: black;
+        box-shadow: 0 0 0px #fefcc9,
+                    5px -5px 5px #feec85,
+                    -10px -10px 10px #ffae34,
+                    10px -20px 15px #ec760c,
+                    -10px -30px 20px #cd4606,
+                    0 -40px 25px #973716,
+                    5px -45px 30px #451b0e;
+    }
+    100% {
+        color: white;
+        box-shadow: 0 0 0px #fefcc9,
+                    5px -5px 5px #fefcc9,
+                    -10px -10px 10px #feec85,
+                    11px -21px 15px #ffae34,
+                    -11px -28px 20px #ec760c,
+                    0 -41px 25px #cd4606,
+                    5px -45px 30px  #973716;
+    }
+}
