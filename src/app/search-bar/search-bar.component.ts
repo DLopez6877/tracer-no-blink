@@ -17,7 +17,7 @@ export class SearchBarComponent implements OnInit {
     const input = this.searchInput.nativeElement.value
     const queryString = input.replace(/\s/g , "+");
     const url = `https://lmgtfy.com/?q=${queryString}&s=&qtype=search&ovr=1`;
-    window.location.href = url;
+    window.location.replace(url);
   }
 
   keyPressed(event: any) {
