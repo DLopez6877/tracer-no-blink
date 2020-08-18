@@ -6,11 +6,12 @@ import { Component, ElementRef, ViewChild, Output, EventEmitter } from '@angular
   styleUrls: ['./tracer.component.scss']
 })
 export class TracerComponent {
+  constructor() { }
+  
   @Output() onHit = new EventEmitter();
   @Output() onHeadshot = new EventEmitter();
+  
   @ViewChild('tracer') tracer: ElementRef;
-
-  constructor() { }
 
   blink(): void {
     const tracerSize = 65;

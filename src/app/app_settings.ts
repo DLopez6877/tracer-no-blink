@@ -3,7 +3,7 @@ import { CrosshairType } from './models/crosshair-type.enum';
 const APP_SETTINGS =  {
     defaults: {
         numberOfTracers: 3,
-        difficulty: 600,
+        difficulty: 550,
         crosshairType: CrosshairType.STANDARD
     }
 } 

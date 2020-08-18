@@ -1,0 +1,15 @@
+{
+  "name": "Tracer, No Blink",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "browser_action": {
+    "default_icon": "assets/tracer.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}

@@ -7,6 +7,13 @@
     flex-direction: column;
 }
 
+app-search-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
 img {
     height: 88px;
 }

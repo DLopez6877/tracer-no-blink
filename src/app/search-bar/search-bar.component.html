@@ -1,0 +1,12 @@
+<div class="background">
+    <div class="nes-field is-inline">
+        <label class="label" for="search">
+            search
+        </label>
+        <input type="text" id="search" class="nes-input" (keyup)="keyPressed($event)" #searchInput>
+        <button type="button" class="search-btn" (click)="search()">
+            <i class="nes-icon google"></i>
+            <div class="hover-overlay"></div>
+        </button>
+    </div>
+</div>

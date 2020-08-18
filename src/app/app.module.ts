@@ -16,6 +16,7 @@ import { LocalStorageService } from './services/local-storage-service/local-stor
 import { HeadshotComponent } from './headshot/headshot.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { CountdownComponent } from './countdown/countdown.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CountdownComponent } from './countdown/countdown.component';
     HeadshotComponent,
     ControlPanelComponent,
     CountdownComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
